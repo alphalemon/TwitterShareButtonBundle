@@ -1,0 +1,2 @@
+imports:
+- { resource: "@TwitterShareBundle/Resources/config/app_block.xml" }

@@ -1,0 +1,21 @@
+{
+    "name": "alphalemon/app-twitter-share-button-bundle",
+    "description": "An AlphaLemon CMS app that adds the Twitter Share button to your website",
+    "keywords": ["alphalemon", "cms", "app", "twitter", "social"],
+    "homepage": "http://alphalemon.com",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [{
+      "name": "AlphaLemon",
+      "email": "info@alphalemon.com"
+    }],
+    "require": {
+        "alphalemon/social-sdk-bundle": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "AlphaLemon\\Block\\TwitterShareBundle": ""
+        }
+    },
+    "target-dir" : "AlphaLemon/Block/TwitterShareBundle",
+    "minimum-stability": "dev"
+}

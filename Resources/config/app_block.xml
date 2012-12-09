@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="twittershare.editor_settings" type="collection">
+            <parameter key="rich_editor">true</parameter>
+        </parameter>
+
+        <parameter key="twitter_share.block.class">AlphaLemon\Block\TwitterShareBundle\Core\Block\AlBlockManagerTwitterShare</parameter>
+        <parameter key="twitter_share.rendering.class">AlphaLemon\Block\TwitterShareBundle\Core\Listener\RenderingEditorListener</parameter>
+    </parameters>
+
+    <services>
+        <service id="twitter_share.block" class="%twitter_share.block.class%">            
+            <argument type="service" id="alpha_lemon_cms.events_handler" />
+            <tag name="alphalemon_cms.blocks_factory.block" description="Twitter Share" type="TwitterShare" group="Twitter" />
+        </service>
+        
+        <service id="twitter_share.rendering" class="%twitter_share.rendering.class%">
+            <tag name="alcms.event_listener" event="actions.block_editor_rendering" method="onBlockEditorRendering" priority="0" />
+        </service>
+    </services>
+</container>
