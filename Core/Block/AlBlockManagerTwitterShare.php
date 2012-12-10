@@ -66,7 +66,7 @@ class AlBlockManagerTwitterShare extends AlBlockManagerJsonBlock
     
     protected function getEditorWidth() 
     {
-        return 300;
+        return 400;
     }
     
     protected function replaceHtmlCmsActive()
