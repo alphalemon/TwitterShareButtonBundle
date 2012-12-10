@@ -2,21 +2,21 @@
 
 {% block form %}
 <form id="{{ form_name }}" action="#" method="post" {{ form_enctype(form) }}>
-    <table>
+    <table class="al_editor_table al_tweet_table">
         <tr>
             <td>{{ form_label(form.url, "Url") }}</td>
             <td>{{ form_errors(form.url) }} {{ form_widget(form.url, { 'attr': {'class' : 'input panel_input'}}) }} </td>
         </tr>
         <tr>
-            <td>{{ form_label(form.text, "Tweet content") }}</td>
-            <td>{{ form_errors(form.text) }} {{ form_widget(form.text, { 'attr': {'class' : 'input panel_input', 'row' : '3'}}) }} </td>
+            <td class="al_vertical_align">{{ form_label(form.text, "Tweet content") }}</td>
+            <td>{{ form_errors(form.text) }} {{ form_widget(form.text, { 'attr': {'class' : 'panel_input', 'rows' : '3'}}) }} </td>
         </tr>
         <tr>
             <td>{{ form_label(form.via, "Via @") }}</td>
             <td>{{ form_errors(form.via) }} {{ form_widget(form.via, { 'attr': {'class' : 'input panel_input'}}) }} </td>
         </tr>
         <tr>
-            <td>{{ form_label(form.related, "Raccomanda @") }}</td>
+            <td>{{ form_label(form.related, "Recomend @") }}</td>
             <td>{{ form_errors(form.related) }} {{ form_widget(form.related, { 'attr': {'class' : 'input panel_input'}}) }} </td>
         </tr>
         <tr>
@@ -28,11 +28,11 @@
             <td>{{ form_errors(form.size) }} {{ form_widget(form.size, { 'attr': {'class' : 'input panel_input'}}) }} </td>
         </tr>
         <tr>
-            <td>{{ form_label(form.dnt, "dnt") }}</td>
+            <td>{{ form_label(form.dnt, "Tailored suggestions") }}</td>
             <td>{{ form_errors(form.dnt) }} {{ form_widget(form.dnt, { 'attr': {'class' : 'input panel_input'}}) }} </td>
         </tr>
         <tr>
-            <td>{{ form_label(form.count, "Show counter") }}</td>
+            <td>{{ form_label(form.count, "Counter position") }}</td>
             <td>{{ form_errors(form.count) }} {{ form_widget(form.count, { 'attr': {'class' : 'input panel_input'}}) }} </td>
         </tr>
         <tr>

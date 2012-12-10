@@ -10,6 +10,10 @@
 
         <parameter key="twitter_share.block.class">AlphaLemon\Block\TwitterShareBundle\Core\Block\AlBlockManagerTwitterShare</parameter>
         <parameter key="twitter_share.rendering.class">AlphaLemon\Block\TwitterShareBundle\Core\Listener\RenderingEditorListener</parameter>
+        
+        <parameter key="twittershare.external_stylesheets.cms" type="collection">
+            <parameter>@TwitterShareBundle/Resources/public/css/twitter_share.css</parameter>
+        </parameter>
     </parameters>
 
     <services>
