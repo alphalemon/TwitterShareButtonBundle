@@ -33,7 +33,7 @@ class TwitterShareType extends JsonBlockType
         $builder->add('hashtags');
         $builder->add('size', 'choice', array('choices' => array('' => 'small', 'large' => 'large')));
         $builder->add('dnt', 'choice', array('choices' => array('' => 'false', 'true' => 'true')));
-        $builder->add('count', 'choice', array('choices' => array('' => 'true', 'none' => 'false')));
+        $builder->add('count', 'choice', array('choices' => array('horizontal' => 'horizontal', 'vertical' => 'vertical', 'none' => 'false')));
         $builder->add('lang');                
     }
     

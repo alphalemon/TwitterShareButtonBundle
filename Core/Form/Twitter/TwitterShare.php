@@ -32,7 +32,7 @@ class TwitterShare
     protected $related;   
     protected $size = false;   
     protected $dnt = false;   
-    protected $count = false;  
+    protected $count;  
     protected $lang;
     
     public function getId()
@@ -82,7 +82,7 @@ class TwitterShare
 
     public function setVia($v)
     {
-        $this->via = (bool)$v;
+        $this->via = $v;
     }
     
     public function getRelated()
